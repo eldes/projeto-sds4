@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.eldes.devsuperior</groupId>
 	<artifactId>dsvendas</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.2.0</version>
 	<name>dsvendas</name>
 	<description>Projeto desenvolvido na Semana Spring React da DevSuperior</description>
 	<properties>
