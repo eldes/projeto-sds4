@@ -11,24 +11,23 @@ type ChartData = {
 
 const DonutChart: FunctionComponent = () => {
 
-	// TODO: Converter para state.
-	let chartData = {
+	const [chartData, setChartData] = useState<ChartData>({
 		labels: [],
 		series: []
-	}
-
-	// TODO: Incorporar dentro do hook useEffect
-	axios.get(`${BASE_URL}/sales/amount-by-seller`)
-	.then( response => {
-		const saleSums = response.data as SaleSum[]
-		const charData = {
-			labels: saleSums.map(saleSum => saleSum.sellerName),
-			series: saleSums.map(saleSum => saleSum.sum)
-		}
-		console.log(charData)
 	})
-	.catch(error => {
-		console.log(error)
+
+	useEffect(() => {
+		axios.get(`${BASE_URL}/sales/amount-by-seller`)
+		.then( response => {
+			const saleSums = response.data as SaleSum[]
+			setChartData({
+				labels: saleSums.map(saleSum => saleSum.sellerName),
+				series: saleSums.map(saleSum => saleSum.sum)
+			})
+		})
+		.catch(error => {
+			console.log(error)
+		})
 	})
 	
 	const options = {
