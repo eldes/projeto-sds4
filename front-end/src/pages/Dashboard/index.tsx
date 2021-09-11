@@ -1,8 +1,6 @@
 import BarChart from 'components/BarChart'
 import DataTable from 'components/DataTable'
 import DonutChart from 'components/DonutChart'
-import Footer from 'components/Footer'
-import NavBar from 'components/NavBar'
 import Page from 'components/Page'
 import { FunctionComponent } from 'react'
 
