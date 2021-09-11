@@ -47,7 +47,10 @@ const BarChart: FunctionComponent = () => {
 			]
 			})
 		})
-	})
+		.catch(error => {
+			console.log(error)
+		})
+	}, [])
 
 	const options = {
 		plotOptions: {

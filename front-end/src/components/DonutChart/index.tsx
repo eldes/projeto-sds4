@@ -28,7 +28,7 @@ const DonutChart: FunctionComponent = () => {
 		.catch(error => {
 			console.log(error)
 		})
-	})
+	}, [])
 	
 	const options = {
 		legend: {
